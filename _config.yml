@@ -1,34 +1,60 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: BarbaraX‘s Hello World
-email: barbaraxiong@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  An Android Developer
+title: BarbaraX
+brief-intro: An Android Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://barbarax.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://barbarax.github.io" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:title/
+
+# other links
+twitter_username:
+facebook_username:
+github_username:  BarbaraX
+email: xiongzhanyunforgood@126.com
+weibo_username:
+zhihu_username:
+linkedIn_username:
+dribbble_username:
+
+description_footer: 此时，只因灯亮，因周围的掌声起，我才我发现我竟是这一幕中的辉煌
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: #hygblog
+disqus_shortname: BarbaraX
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id:
+google_analytics_id:  # google 分析追踪id
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
-permalink: /blog/:year/:title
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6

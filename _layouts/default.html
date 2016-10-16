@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/stylesheets/github-light.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+<html>
 
-			{{ content }}
+  {% include head.html %}
 
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:xiongzhanyun@meituan.com">email</a></li>
-	        		<li><a href="https://github.com/barbarax">github.com/BarbaraX</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+  <body>
+
+    {% include header.html %}
+
+        {{ content }}
+
+    {% include footer.html %}
+    {% include backToTop.html %}
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+  </body>
+
+</html>
